@@ -1,0 +1,22 @@
+{
+  "name": "NodeJS_Activity",
+  "version": "1.0.0",
+  "description": "Activity",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "moustache": "0.0.2",
+    "mustache": "^3.0.1",
+    "mustache-express": "^1.2.8"
+  },
+  "devDependencies": {
+		"json-server": "^0.14.0",
+		"static-server": "^2.2.1"
+	},
+	"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "./node_modules/.bin/json-server --watch ./src/resources/db.json"
+  },
+  "author": "Geo Mosaic Diaz",
+  "license": "ISC"
+}
