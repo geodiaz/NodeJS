@@ -5,13 +5,14 @@
         <h4>Categories</h4> 
 <ul class="list-unstyled  categories-group ">
     <li>
-    <a href="/category/headphones" class=""><span class="badge">4</span>Headphones</a>
+    <a href="/products/vegetables" class=""><span class="badge">{{products.length}}</span>Vegetables</a>
+            </li>
+            
+    <li>
+    <a href="/products/fruits" class=""><span class="badge">4</span>Fruits</a>
             </li>
     <li>
-    <a href="/category/portable-speakers" class=""><span class="badge">4</span>Portable Speakers</a>
-            </li>
-    <li>
-    <a href="/category/wearable-tech" class=""><span class="badge">4</span>Wearable Tech</a>
+    <a href="/prodcuts/meat&poultry" class=""><span class="badge">4</span>Meat & Poultry</a>
             </li>
 </ul>
 
@@ -24,260 +25,28 @@
         <div id="product-list">
 <div class="product-grid">
 <div id="" class="row">
+
 <div class="col-xs-12 col-sm-6 col-md-4 product-holder">
+        {{#products}}
 <form  class="custom" onsubmit="return false" method="post" action="/shop">
 <div class="product-item text-center">
-<a class="product-img" href="/product/blue-headphones">
-<img class="img-responsive" src="//dd6vif294zh3b.cloudfront.net/store-boxie-5398d8498b7b0/uploaded/thumbnails/BlueHeadphones_400x300-jpg-keep-ratio.png?1402609735" alt="Blue Headphones" />
+<a class="product-img" href="/products/{{_id}}/edit">
+<img class="img-responsive" src="{{headerImage}}" alt="" />
 </a>
 <h3 class="product-title">
-<a href="/product/blue-headphones">Blue Headphones</a>
+<a href="/products/{{_id}}/edit">{{name}}</a>
 </h3>
 <div class="h4 product-price">
-<span>$99.00</span>
+<span>{{price}}</span>
 </div>
 <div class="buttons-holder">
-<a class="btn btn-default btn-quick-view hidden-xs" rel="tooltip" title="Quick View" href="/product/blue-headphones"><i class="fa fa-eye"></i></a>
 </div>
 </div>
-
-
 </form>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4 product-holder">
-<form  class="custom" onsubmit="return false" method="post" action="/shop">
-<div class="product-item text-center">
-<a class="product-img" href="/product/blue-wristband-tracker">
-<img class="img-responsive" src="//dd6vif294zh3b.cloudfront.net/store-boxie-5398d8498b7b0/uploaded/thumbnails/BlueJawbone_400x300-jpg-keep-ratio.png?1402609889" alt="Blue Wristband Tracker" />
-</a>
-<h3 class="product-title">
-<a href="/product/blue-wristband-tracker">Blue Wristband Tracker</a>
-</h3>
-<div class="h4 product-price">
-<span>$129.00</span>
-</div>
-<div class="buttons-holder">
-<a class="btn btn-default btn-quick-view hidden-xs" rel="tooltip" title="Quick View" href="/product/blue-wristband-tracker"><i class="fa fa-eye"></i></a>
-</div>
+        {{/products}}
 </div>
 
 
-</form>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4 product-holder">
-<form  class="custom" onsubmit="return false" method="post" action="/shop">
-<div class="product-item text-center">
-<a class="product-img" href="/product/green-headphones">
-<img class="img-responsive" src="//dd6vif294zh3b.cloudfront.net/store-boxie-5398d8498b7b0/uploaded/thumbnails/ArmyGreenheadphones_400x300-jpg-keep-ratio.png?1402609888" alt="Green Headphones" />
-</a>
-<h3 class="product-title">
-<a href="/product/green-headphones">Green Headphones</a>
-</h3>
-<div class="h4 product-price">
-<span class="previous-price">$99.00</span>s
-<span>$94.00</span>
-</div>
-<div class="buttons-holder">
-<a class="btn btn-default btn-quick-view hidden-xs" rel="tooltip" title="Quick View" href="/product/green-headphones"><i class="fa fa-eye"></i></a>
-</div>
-</div>
-
-
-</form>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4 product-holder">
-<form  class="custom" onsubmit="return false" method="post" action="/shop">
-<div class="product-item text-center">
-<a class="product-img" href="/product/green-speaker">
-<img class="img-responsive" src="//dd6vif294zh3b.cloudfront.net/store-boxie-5398d8498b7b0/uploaded/thumbnails/LimeGreenroundspeaker_400x300-jpg-keep-ratio.png?1402609889" alt="Green Speaker" />
-</a>
-<h3 class="product-title">
-<a href="/product/green-speaker">Green Speaker</a>
-</h3>
-<div class="h4 product-price">
-<span>$89.00</span>
-</div>
-<div class="buttons-holder">
-<a class="btn btn-default btn-quick-view hidden-xs" rel="tooltip" title="Quick View" href="/product/green-speaker"><i class="fa fa-eye"></i></a>
-</div>
-</div>
-
-
-</form>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4 product-holder">
-<form  class="custom" onsubmit="return false" method="post" action="/shop">
-<div class="product-item text-center">
-<a class="product-img" href="/product/lime-green-fitness-tracker">
-<img class="img-responsive" src="//dd6vif294zh3b.cloudfront.net/store-boxie-5398d8498b7b0/uploaded/thumbnails/LimeGreenFitBit_400x300-jpg-keep-ratio.png?1402609890" alt="Lime Green Fitness Tracker" />
-</a>
-<h3 class="product-title">
-<a href="/product/lime-green-fitness-tracker">Lime Green Fitness Tracker</a>
-</h3>
-<div class="h4 product-price">
-<span>$99.00</span>
-</div>
-<div class="buttons-holder">
-<a class="btn btn-default btn-quick-view hidden-xs" rel="tooltip" title="Quick View" href="/product/lime-green-fitness-tracker"><i class="fa fa-eye"></i></a>
-</div>
-</div>
-
-
-</form>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4 product-holder">
-<form  class="custom" onsubmit="return false" method="post" action="/shop">
-<div class="product-item text-center">
-<a class="product-img" href="/product/lime-green-speaker">
-<img class="img-responsive" src="//dd6vif294zh3b.cloudfront.net/store-boxie-5398d8498b7b0/uploaded/thumbnails/LimeGreenSpeaker_400x300-jpg-keep-ratio.png?1402609735" alt="Lime Green Speaker" />
-</a>
-<h3 class="product-title">
-<a href="/product/lime-green-speaker">Lime Green Speaker</a>
-</h3>
-<div class="h4 product-price">
-<span>$99.00</span>
-</div>
-<div class="buttons-holder">
-<a class="btn btn-default btn-quick-view hidden-xs" rel="tooltip" title="Quick View" href="/product/lime-green-speaker"><i class="fa fa-eye"></i></a>
-</div>
-</div>
-
-
-</form>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4 product-holder">
-<form  class="custom" onsubmit="return false" method="post" action="/shop">
-<div class="product-item text-center">
-<a class="product-img" href="/product/orange-headphones">
-<img class="img-responsive" src="//dd6vif294zh3b.cloudfront.net/store-boxie-5398d8498b7b0/uploaded/thumbnails/OrangeHeadphones_400x300-jpg-keep-ratio.png?1402608019" alt="Orange Headphones" />
-</a>
-<h3 class="product-title">
-<a href="/product/orange-headphones">Orange Headphones</a>
-</h3>
-<div class="h4 product-price">
-<span>$99.00</span>
-</div>
-<div class="buttons-holder">
-<a class="btn btn-default btn-quick-view hidden-xs" rel="tooltip" title="Quick View" href="/product/orange-headphones"><i class="fa fa-eye"></i></a>
-                        <input type="hidden" name="productId" value="5"/>
-<a class="btn btn-danger btn-add-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart</a>
-</div>
-</div>
-
-
-</form>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4 product-holder">
-<form  class="custom" onsubmit="return false" method="post" action="/shop">
-<div class="product-item text-center">
-<a class="product-img" href="/product/pink-bluetooth-watch">
-<img class="img-responsive" src="//dd6vif294zh3b.cloudfront.net/store-boxie-5398d8498b7b0/uploaded/thumbnails/PinkWatch_400x300-jpg-keep-ratio.png?1402609735" alt="Pink Bluetooth Watch" />
-</a>
-<h3 class="product-title">
-<a href="/product/pink-bluetooth-watch">Pink Bluetooth Watch</a>
-</h3>
-<div class="h4 product-price">
-<span>$129.00</span>
-</div>
-<div class="buttons-holder">
-<a class="btn btn-default btn-quick-view hidden-xs" rel="tooltip" title="Quick View" href="/product/pink-bluetooth-watch"><i class="fa fa-eye"></i></a>
-                        <input type="hidden" name="productId" value="13"/>
-<a class="btn btn-danger btn-add-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart</a>
-</div>
-</div>
-
-
-</form>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4 product-holder">
-<form  class="custom" onsubmit="return false" method="post" action="/shop">
-<div class="product-item text-center">
-<a class="product-img" href="/product/purple-fitness-tracker">
-<img class="img-responsive" src="//dd6vif294zh3b.cloudfront.net/store-boxie-5398d8498b7b0/uploaded/thumbnails/PurpleFitTracker_400x300-jpg-keep-ratio.png?1402609889" alt="Purple Fitness Tracker" />
-</a>
-<h3 class="product-title">
-<a href="/product/purple-fitness-tracker">Purple Fitness Tracker</a>
-</h3>
-<div class="h4 product-price">
-<span>$89.00</span>
-</div>
-<div class="buttons-holder">
-<a class="btn btn-default btn-quick-view hidden-xs" rel="tooltip" title="Quick View" href="/product/purple-fitness-tracker"><i class="fa fa-eye"></i></a>
-                        <input type="hidden" name="productId" value="14"/>
-<a class="btn btn-danger btn-add-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart</a>
-</div>
-</div>
-
-
-</form>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4 product-holder">
-<form  class="custom" onsubmit="return false" method="post" action="/shop">
-<div class="product-item text-center">
-<a class="product-img" href="/product/purple-speaker">
-<img class="img-responsive" src="//dd6vif294zh3b.cloudfront.net/store-boxie-5398d8498b7b0/uploaded/thumbnails/PurpleSpeaker_400x300-jpg-keep-ratio.png?1402609736" alt="Purple Speaker" />
-</a>
-<h3 class="product-title">
-<a href="/product/purple-speaker">Purple Speaker</a>
-</h3>
-<div class="h4 product-price">
-<span class="previous-price">$99.00</span>
-<span>$94.00</span>
-</div>
-<div class="buttons-holder">
-<a class="btn btn-default btn-quick-view hidden-xs" rel="tooltip" title="Quick View" href="/product/purple-speaker"><i class="fa fa-eye"></i></a>
-                        <input type="hidden" name="productId" value="12"/>
-<a class="btn btn-danger btn-add-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart</a>
-</div>
-</div>
-
-
-</form>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4 product-holder">
-<form  class="custom" onsubmit="return false" method="post" action="/shop">
-<div class="product-item text-center">
-<a class="product-img" href="/product/red-headphones">
-<img class="img-responsive" src="//dd6vif294zh3b.cloudfront.net/store-boxie-5398d8498b7b0/uploaded/thumbnails/Redheadphones_400x300-jpg-keep-ratio.png?1402609889" alt="Red Headphones" />
-</a>
-<h3 class="product-title">
-<a href="/product/red-headphones">Red Headphones</a>
-</h3>
-<div class="h4 product-price">
-<span>$99.00</span>
-</div>
-<div class="buttons-holder">
-<a class="btn btn-default btn-quick-view hidden-xs" rel="tooltip" title="Quick View" href="/product/red-headphones"><i class="fa fa-eye"></i></a>
-                        <input type="hidden" name="productId" value="8"/>
-<a class="btn btn-danger btn-add-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart</a>
-</div>
-</div>
-
-
-</form>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4 product-holder">
-<form  class="custom" onsubmit="return false" method="post" action="/shop">
-<div class="product-item text-center">
-<a class="product-img" href="/product/red-speaker">
-<img class="img-responsive" src="//dd6vif294zh3b.cloudfront.net/store-boxie-5398d8498b7b0/uploaded/thumbnails/RedSpeaker_400x300-jpg-keep-ratio.png?1402609889" alt="Red Speaker" />
-</a>
-<h3 class="product-title">
-<a href="/product/red-speaker">Red Speaker</a>
-</h3>
-<div class="h4 product-price">
-<span>$89.00</span>
-</div>
-<div class="buttons-holder">
-<a class="btn btn-default btn-quick-view hidden-xs" rel="tooltip" title="Quick View" href="/product/red-speaker"><i class="fa fa-eye"></i></a>
-                        <input type="hidden" name="productId" value="11"/>
-<a class="btn btn-danger btn-add-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart</a>
-</div>
-</div>
-
-
-</form>
-</div>
 </div>
 </div>
 <div class="pagination-holder">
