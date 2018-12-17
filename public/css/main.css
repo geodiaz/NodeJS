@@ -6444,9 +6444,7 @@ h2 small{display: block; font-size: 12px; line-height: 18px;}
   background: #c5381b;
   color: #fff;
 }
-.btn .fa {
-  margin-left: 6px;
-}
+
 .btn.pull-left .fa {
   margin-left: 0;
   margin-right: 6px;

@@ -1,0 +1,75 @@
+<section id="shop" class="page-section row"></section>
+<!-- #LEFT CONTAINER -->
+<div class="col-xs-12 col-sm-3">
+    <div class="sidebar">
+        <h4>Content</h4><br/>
+<ul class="list-unstyled  categories-group ">
+        <li>
+                <a href="/" class=""><span class="badge"></span><center>Home</center></a>
+        </li>
+
+        <li>
+                <a href="/about" class=""><span class="badge"></span><center>About Us</center></a>
+        </li>
+
+        <li>
+                <a href="/contact" class=""><span class="badge"></span><center>Contact Us</center></a>
+        </li>
+</ul>
+<br/>
+<br/>
+    </div>
+</div>
+<!-- /LEFT CONTAINER -->
+
+<div class="col-xs-12 col-sm-9">
+        <div id="product-list">
+<div class="product-grid">
+    <center><h1>CART</h1></center>
+        {{#cart}}
+        <!-- <br/>
+        <img src ="{{headerImage}}" ><h6>{{name}}</h6>
+        <h4><p>₱{{price}}.00</p></h4><br/> -->
+        <center>
+        <br/>
+        <br/>
+        <form method="POST" action="/products/{{_id}}/cart/delete">
+        <img src="{{headerImage}}" style="height: 80px;" style="width: 80px;">
+        <span class="text">{{name}}</span>
+        <span class="text">₱ {{price}}.00</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Remove"/>
+        <br/>
+        </form>
+        {{/cart}}
+        <br/>
+        <br/>
+</div>
+
+<div>
+    <form method="POST" action="/checkout">
+        <center><input type="submit" value="Checkout"/></center>    
+    </form>
+</div>
+<br/>
+<br/>
+<ul class="list-unstyled  categories-group ">
+        <li>
+                <a href="/products" class=""><span class="badge"></span><center>Back to Shop</center></a>
+        </li>
+</ul>
+
+    <style>
+    .text {
+        padding-left: 50px;
+        font-size: 20px;
+    }
+
+    .cart {
+        padding-bottom: 20px;
+        height: 20px;
+        width: 20px;
+    }
+
+ 
+    </style>
+   
