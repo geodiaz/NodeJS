@@ -25,7 +25,7 @@
     <label hidden="true">Qty: </label>
     <div class="quantity buttons_added">
     <input type="button" onclick="subtract()" value="-" class="minus">
-    <input name="qty2" type="number" min="0" max="" value ="" id="cart-qty" class="input-text qty text" size="4" pattern="" inputmode="" readonly/>
+    <input name="qty2" type="number" min="1" max="" value ="1" id="cart-qty" class="input-text qty text" size="4" pattern="" inputmode="" readonly/>
     <input type="button" onclick="add()" value="+" class="plus">
     </div><br/><br/>
     <textarea hidden="true" rows="5" cols="100" name="content">{{product.content}}</textarea>
@@ -86,7 +86,7 @@
         function VERIFICATION(){
             var validationclick = document.getElementById("validateZero");
             var qty2 = document.getElementById("cart-qty").value;
-            if(qty2 == ""){
+            if(qty2 == 0){
         alert("Invalid number of items!")
             }else{
                 validationclick.click();
