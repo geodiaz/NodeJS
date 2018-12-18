@@ -37,8 +37,9 @@
         <img src="{{headerImage}}" style="height: 80px;" style="width: 80px;">
         <span class="text">{{name}}</span>
         <span class="text">₱ {{price}}.00</span>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Remove"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class ="btn-danger"><img src="/img/close.png" width="15"></button>
         <br/>
+        <span class="text">Count: {{qty2}}</span>
         </form>
         {{/cart}}
         <br/>
@@ -47,7 +48,7 @@
 
 <div>
     <form method="POST" action="/checkout">
-        <center><input type="submit" value="Checkout"/></center>    
+        <center><input type="submit" value="Checkout" class="btn btn-danger"/></center>    
     </form>
 </div>
 <br/>

@@ -89,7 +89,7 @@ app.post("/products/:id/update", (req, res) => {
 
             if (err) return console.log(err)
             res.redirect('/products')
-      })
+      });
 });
 
 app.post("/products/:id/delete", (req, res) => {
@@ -101,22 +101,29 @@ app.post("/products/:id/delete", (req, res) => {
 
         if (err) return console.log(err)
         res.redirect('/products')
-      })
+      });
 });
 
 
-// ??????????????????????????????????????????????????????????????????????????????????????
+
 //cart
 
 app.post("/products/:id/cart", (req, res) => {
+    const id = req.params.id;
+
+    mongoDb.collection("products").update(
+        { _id: new ObjectID(id)},
+        req.body, (err, result) => {
+            
+            if (err) return console.log(err)
+      });
 
     mongoDb.collection("cart").save(req.body, (err, result) => {
         
         if (err) return console.log(err);
-
-        if (err) throw err; 
         if (result) console.log("Successfully Added to Cart!"); 
-        res.redirect('/cart');
+
+        res.redirect('/products');
       });
 });
 
@@ -156,9 +163,10 @@ app.post("/checkout", (req, res) => {
     const id = req.params.id; 
     
     mongoDb.dropCollection("cart", function(err, delOK) { 
-    if (err) throw err; 
-    if (delOK) console.log("cart deleted"); 
-   res.redirect('/') 
+    if (err) throw err;
+    
+    if (delOK) console.log("Thank you for your Purchase!"); 
+    res.redirect('/');
     }); 
     }); 
 
