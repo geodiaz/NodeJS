@@ -30,12 +30,13 @@
     </div><br/><br/>
     <textarea hidden="true" rows="5" cols="100" name="content">{{product.content}}</textarea>
 
-    <input type="submit" id="add-to-cart" class="btn-danger btn" value="Add to Cart"/>
+    <input hidden="true" type="submit" id="validateZero" value="Add to Cart"/>
     <input hidden="true" name="qty" type="text" id="product-qty" value="{{product.qty}}" class="input-text qty text" size="4" readonly="readonly"/>
 
               
 </form>
 </center>
+<center><button onclick="VERIFICATION()" class="btn btn-danger">Add to Cart</button></center>
 <br/>
 <ul class="list-unstyled  categories-group ">
         <li>
@@ -81,5 +82,15 @@
         document.getElementById("product-qty").innerHTML = document.getElementById("product-qty").value = b;
         }
         }
+
+        function VERIFICATION(){
+            var validationclick = document.getElementById("validateZero");
+            var qty2 = document.getElementById("cart-qty").value;
+            if(qty2 == ""){
+        alert("Invalid number of items!")
+            }else{
+                validationclick.click();
+        }
+        } 
         </script> 
 
